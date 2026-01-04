@@ -5,38 +5,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<body>
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Form Grid</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <style>
-    .card1{
-        max-width: 300px;
-        background-color: aqua;
-        margin: auto;
-    }
-    .card2{
-        min-width:200px ;
-        background-color: blue;
-        float: right;
-        
-    }
-    div h1{
-        background-color: brown;
-    }
-    .container h1{
-        background-color: red;
+    * {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
-    }
-    .container h2{
-        background-color: yellow;
-    }
+body {
+  background: #f8f8f8;
+  padding: 40px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-container {
+  max-width: 1100px;
+  margin: auto;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px;
+}
+
+.form-section h3 {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 15px 0 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #f2f2f2;
+  outline: none;
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #6aa84f;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #5c9645;
+}
+
+.image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 </style>
 <body>
-    <!-- max width (800px less) and min width 300px increase  -->
-     <!-- responsive (laptop,tablet,mobile) -->
-      <div><h1>Its manoooooooooooooooo</h1></div>
-      <div class="card1">Card no 1</div>
-      <div class="card2">Card no 2</div>
-      <div class="container"><h1>Abubaker</h1></div>
-      <div class="container"><h2>Ahmad</h2></div>
 
-      
+  <h2 class="title">Contact Form #08</h2>
+
+  <div class="contact-container">
+
+    <!-- Left side form -->
+    <div class="form-section">
+      <h3>Get in touch with us</h3>
+
+      <form>
+        <div class="grid-2">
+          <div>
+            <label>FULL NAME</label>
+            <input type="text" placeholder="Name">
+          </div>
+
+          <div>
+            <label>EMAIL ADDRESS</label>
+            <input type="email" placeholder="Email">
+          </div>
+        </div>
+
+        <label>SUBJECT</label>
+        <input type="text" placeholder="Subject">
+
+        <label>MESSAGE</label>
+        <textarea placeholder="Message"></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Right side image -->
+    <div class="image-section">
+      <img src="../class12 practice/images.jpg" alt="Plant Image">
+    </div>
+
+  </div>
+
+</body>
+</html> 
 </body>
 </html>
