@@ -2,133 +2,131 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Our Services</title>
+    <<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f8f9fa;
+        }
+
+        .container {
+            width: 90%;
+            margin: 50px auto;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .heading small {
+            color: green;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .heading h1 {
+            margin-top: 10px;
+            font-size: 32px;
+        }
+
+        .content {
+            display: flex;
+            gap: 30px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 6px;
+        }
+
+        /* Left Menu */
+        .services {
+            width: 30%;
+        }
+
+        .services ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .services li {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .services li.active {
+            background: #5a8f6b;
+            color: #fff;
+        }
+
+        /* Right Content */
+        .details {
+            width: 70%;
+        }
+
+        .details img {
+            width: 100%;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        .details h2 {
+            margin-bottom: 10px;
+        }
+
+        .details p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            .services, .details {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-   <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Contact Form Grid</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<style>
-    * {
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
 
-body {
-  background: #f8f8f8;
-  padding: 40px;
-}
+<div class="container">
 
-.title {
-  text-align: center;
-  margin-bottom: 30px;
-}
+    <div class="heading">
+        <small>OUR SERVICES</small>
+        <h1>We Can Help You With This Situation</h1>
+    </div>
 
-.contact-container {
-  max-width: 1100px;
-  margin: auto;
-  background: #fff;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  padding: 40px;
-}
-
-.form-section h3 {
-  margin-bottom: 20px;
-}
-
-label {
-  display: block;
-  font-size: 12px;
-  font-weight: bold;
-  margin: 15px 0 5px;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  background: #f2f2f2;
-  outline: none;
-}
-
-textarea {
-  height: 120px;
-  resize: none;
-}
-
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-button {
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: #6aa84f;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #5c9645;
-}
-
-.image-section img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-</style>
-<body>
-
-  <h2 class="title">Contact Form #08</h2>
-
-  <div class="contact-container">
-
-    <!-- Left side form -->
-    <div class="form-section">
-      <h3>Get in touch with us</h3>
-
-      <form>
-        <div class="grid-2">
-          <div>
-            <label>FULL NAME</label>
-            <input type="text" placeholder="Name">
-          </div>
-
-          <div>
-            <label>EMAIL ADDRESS</label>
-            <input type="email" placeholder="Email">
-          </div>
+    <div class="content">
+        <!-- Left Side -->
+        <div class="services">
+            <ul>
+                <li class="active">Relation Problem</li>
+                <li>Couples Counseling</li>
+                <li>Depression Treatment</li>
+                <li>Family Problem</li>
+                <li>Personal Problem</li>
+                <li>Business Problem</li>
+            </ul>
         </div>
 
-        <label>SUBJECT</label>
-        <input type="text" placeholder="Subject">
+        <!-- Right Side -->
+        <div class="details">
+            <img src="./images (1).jpg" alt="Relation Problem" width="300px" height="300px">
 
-        <label>MESSAGE</label>
-        <textarea placeholder="Message"></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
+            <h2>Relation Problem</h2>
+            <p>
+                Far far away, behind the word mountains, far from the countries Vokalia
+                and Consonantia, there live the blind texts. Separated they live in
+                Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+            </p>
+        </div>
     </div>
 
-    <!-- Right side image -->
-    <div class="image-section">
-      <img src="../class12 practice/images.jpg" alt="Plant Image">
-    </div>
+</div>
 
-  </div>
-
-</body>
-</html> 
 </body>
 </html>
