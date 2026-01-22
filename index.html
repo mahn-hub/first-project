@@ -1,132 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Our Services</title>
-    <<style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f8f9fa;
-        }
-
-        .container {
-            width: 90%;
-            margin: 50px auto;
-        }
-
-        .heading {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .heading small {
-            color: green;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-
-        .heading h1 {
-            margin-top: 10px;
-            font-size: 32px;
-        }
-
-        .content {
-            display: flex;
-            gap: 30px;
-            background: #fff;
-            padding: 30px;
-            border-radius: 6px;
-        }
-
-        /* Left Menu */
-        .services {
-            width: 30%;
-        }
-
-        .services ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .services li {
-            padding: 15px;
-            border-bottom: 1px solid #ddd;
-            cursor: pointer;
-            font-weight: 600;
-        }
-
-        .services li.active {
-            background: #5a8f6b;
-            color: #fff;
-        }
-
-        /* Right Content */
-        .details {
-            width: 70%;
-        }
-
-        .details img {
-            width: 100%;
-            border-radius: 6px;
-            margin-bottom: 20px;
-        }
-
-        .details h2 {
-            margin-bottom: 10px;
-        }
-
-        .details p {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        @media (max-width: 768px) {
-            .content {
-                flex-direction: column;
-            }
-            .services, .details {
-                width: 100%;
-            }
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
+<style>
+    * {
+        width: 1440;
+        height: 4774;
+        opacity: 1;
+    }
+
+    body {
+        background-image: url(image.jpg);
+        width: 1440;
+        height: 4774;
+        opacity: 1;
+
+
+    }
+
+    .image {
+        position: absolute;
+        top: 0;
+        left: 1200px;
+    }
+
+    .navbar {
+        padding: 20px 30px;
+        margin-left: 100px;
+
+    }
+
+    .nav-menu {
+        list-style: none;
+        display: flex;
+        gap: 70px;
+        margin-top: 20px;
+        margin-left: 90px;
+
+    }
+
+    .nav-menu li {
+        position: relative;
+        width: 100%;
+    }
+
+    .nav-menu a {
+        color: black;
+        text-decoration: none;
+        font-size: 16px;
+        justify-content: center;
+    }
+
+    .btn {
+        position: relative;
+        justify-content: center;
+        font-size: 16px;
+        border-width: 1px;
+
+    }
+
+    .navbar img {
+        position: relative;
+        right: 100px;
+        top: 70px;
+    }
+
+    .container {
+        float: right;
+        position: relative;
+        z-index: 1;
+        right: 220px;
+        top: -70px;
+
+    }
+
+    .text {
+        float: left;
+        position: relative;
+        left: 150px;
+        top: 150px;
+    }
+
+    .heading {
+        text-align: center;
+        margin-top: 750px;
+        justify-content: center;
+        top: 1011px;
+
+    }
+
+    .heading p {
+        text-align: center;
+        color: gray;
+        justify-content: center;
+        margin-top: 750px;
+        margin-left: 750px;
+    }
+
+    .class-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .info {
+        text-align: center;
+        margin-top: 300px;
+        font-size: 50px;
+    }
+    .i3{
+        float:right;
+        margin-right: 220px;
+        margin-top: -150px;
+    }
+    .ef{
+        margin-left: 250px;
+        margin-top: 150px;
+    }
+    .text3{
+    justify-content: center;
+    margin-top: 100px;
+    margin-left: 300px;
+    font-size: 30px;
+    }
+</style>
+
 <body>
-
-<div class="container">
-
-    <div class="heading">
-        <small>OUR SERVICES</small>
-        <h1>We Can Help You With This Situation</h1>
-    </div>
-
-    <div class="content">
-        <!-- Left Side -->
-        <div class="services">
-            <ul>
-                <li class="active">Relation Problem</li>
-                <li>Couples Counseling</li>
-                <li>Depression Treatment</li>
-                <li>Family Problem</li>
-                <li>Personal Problem</li>
-                <li>Business Problem</li>
+    <div id="hero-section">
+        <img src="./Decore.png" class="image" alt="">
+        <nav class="navbar">
+            <img src="./Logo.png" alt="">
+            <ul class="nav-menu">
+                <li><a href="#">Destinations</a></li>
+                <li><a href="#">Hotels</a></li>
+                <li><a href="#">Flights</a></li>
+                <li><a href="#">Booking</a></li>
+                <li><a href="#">Login</a></li>
+                <button class="btn">Sign up</button>
+                <li><a href="#">EN</a></li>
             </ul>
+
+        </nav>
+        <div class="container">
+            <img src="./Image.png" alt="">
+        </div>
+        <div class="text">
+            <img src="./Desc.png" alt="">
         </div>
 
-        <!-- Right Side -->
-        <div class="details">
-            <img src="./images (1).jpg" alt="Relation Problem" width="300px" height="300px">
 
-            <h2>Relation Problem</h2>
-            <p>
-                Far far away, behind the word mountains, far from the countries Vokalia
-                and Consonantia, there live the blind texts. Separated they live in
-                Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-            </p>
-        </div>
     </div>
+    <div class="heading">
+        <p>CATEGORY</p>
+        <h1>We Offer Best Services</h1>
+    </div>
+    <div class="class-container">
+        <div class="card">
+            <img src="./Group 48.png" alt="">
+            <h4>Calculated Weather</h4>
+            <p>>Built Wicket longer admire <br>do barton vanity itself do in it.</p>
+        </div>
+        <div class="card"><img src="./Category Active.png" alt=""></div>
+        <div class="card"><img src="./Group 50.png" alt="">
+            <h4>Local Events</h4>
+            <p>Barton vanity itself do in it. <br> Preferd to men it engrossed listening. </p>
+        </div>
+        <div class="card"><img src="./Group 49.png" alt="">
+            <h4>Customization</h4>
+            <p>We deliver outsourcedaviation <br> services formilitary customers</p>
+        </div>
 
-</div>
-
+    </div>
+    <div class="info">
+        <p>Top Selling</p>
+        <h1>Top Destinations</h1>
+    </div>
+    <div class="info2">
+        <img src="./image1.png" alt="" class="img">
+        <img src="./Destination.png" alt="" class="img">
+        <img src="./Rectangle 14.png" alt="" class="img">
+    </div>
+    <div class="text3">
+        <p>Easy and Fast</p>
+        <h1>Book your next trip <br> In 3 easy steps</h1>
+    </div>
+    <img src="./girl.png" alt="" class="i3">
+    <div class="ef">
+        <img src="./Values.png" alt="">
+    </div>
+    </div>
 </body>
+
 </html>
