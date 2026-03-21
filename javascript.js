@@ -1,119 +1,129 @@
-let price1 = 50;
-let price2 = 30;
-let price3 = 20;
+function calculateBill() {
+    let items = parseInt(prompt("Enter number of items:"));
+    let total = 0;
 
-let total = price1 + price2 + price3;
+    for (let i = 1; i <= items; i++) {
+        let price = parseFloat(prompt("Enter price of item " + i + ":"));
+        total += price;
+    }
 
-console.log("Total Price:", total);
-let price = 200;
-let dis = price * 0.10;
-let finalPrice = price - dis;
+    if (total > 5000) {
+        total = total - (total * 0.10);
+        alert("10% discount applied!");
+    }
 
-console.log("Price after dis:", finalPrice);
-let amount = 500;
-let tax = amount * 0.18;
-let totalBill = amount + tax;
-
-console.log("Total Bill:", totalBill);
-let weight = 60; // kg
-let height = 1.6; // meters
-
-let bmi = weight / (height * height);
-
-console.log("BMI:", bmi);
-let salary = 50000;
-let tx = salary * 0.10;
-let finalSalary = salary - tx;
-
-console.log("Salary after tx:", finalSalary);
-let r1 = 4;
-let r2 = 5;
-let r3 = 3;
-let r4 = 4;
-let r5 = 5;
-
-let average = (r1 + r2 + r3 + r4 + r5) / 5;
-
-console.log("Average Rating:", average);
-let orderAmount = 80;
-let shipping;
-
-if (orderAmount > 100) {
-    shipping = 0;
-} else {
-    shipping = 10;
+    alert("Final Bill: " + total);
 }
 
-console.log("Shipping Charge:", shipping);
-let P = 1000;
-let R = 5;
-let T = 2;
-
-let SI = (P * R * T) / 100;
-
-console.log("Simple Interest:", SI);
-let balance = 1000;
-let withdraw = 300;
-
-let remaining = balance - withdraw;
-
-console.log("Remaining Balance:", remaining);
-let minutes = 135;
-
-let hours = Math.floor(minutes / 60);
-let remainingMinutes = minutes % 60;
-
-console.log("Hours:", hours);
-console.log("Minutes:", remainingMinutes);
-let username = "admin";
-let password = "1234";
-
-if (username === "admin" && password === "1234") {
-    console.log("Login Successful");
-} else {
-    console.log("Invalid Username or Password");
-}
-let age = 16;
-
-if (age < 18) {
-    console.log("Access Denied");
-} else {
-    console.log("Access Allowed");
-}
-let order = 250;
-let discount = 0;
-
-if (order > 200) {
-    discount = order * 0.20;
-} else if (order > 100) {
-    discount = order * 0.10;
+calculateBill();
+function calculateGrade(avg) {
+    if (avg >= 80) return "A";
+    else if (avg >= 60) return "B";
+    else if (avg >= 40) return "C";
+    else return "Fail";
 }
 
-let finalAmount = order - discount;
+function studentResult() {
+    let name = prompt("Enter student name:");
+    let total = 0;
 
-console.log("Final Amount:", finalAmount);
-let marks = 75;
-let grade;
+    for (let i = 1; i <= 5; i++) {
+        let marks = parseFloat(prompt("Enter marks for subject " + i + ":"));
+        total += marks;
+    }
 
-if (marks >= 80) {
-    grade = "A";
-} else if (marks >= 70) {
-    grade = "B";
-} else if (marks >= 60) {
-    grade = "C";
-} else {
-    grade = "Fail";
+    let average = total / 5;
+    let grade = calculateGrade(average);
+
+    alert("Name: " + name +
+          "\nTotal: " + total +
+          "\nAverage: " + average +
+          "\nGrade: " + grade);
 }
 
-console.log("Grade:", grade);
-let weather = "rainy";
-
-if (weather === "hot") {
-    console.log("Drink more water");
-} else if (weather === "cold") {
-    console.log("Wear warm clothes");
-} else if (weather === "rainy") {
-    console.log("Take an umbrella");
-} else {
-    console.log("Weather normal");
+studentResult();
+function withdrawMoney(balance, amount) {
+    if (amount > balance) {
+        alert("Insufficient balance");
+        return balance;
+    } else {
+        return balance - amount;
+    }
 }
+
+function atmSystem() {
+    let balance = 10000;
+
+    for (let i = 1; i <= 3; i++) {
+        let amount = parseFloat(prompt("Enter amount to withdraw:"));
+
+        let newBalance = withdrawMoney(balance, amount);
+
+        if (newBalance !== balance) {
+            balance = newBalance;
+            alert("Remaining Balance: " + balance);
+            break;
+        } else {
+            alert("Attempt " + i + " failed");
+        }
+    }
+}
+
+atmSystem();
+function calculateOrder(item, quantity) {
+    let price = 0;
+
+    if (item === "burger") price = 500;
+    else if (item === "pizza") price = 1200;
+    else if (item === "drink") price = 200;
+    else {
+        alert("Invalid item");
+        return 0;
+    }
+
+    let total = price * quantity;
+
+    if (total > 2000) {
+        total -= total * 0.15;
+        alert("15% discount applied!");
+    }
+
+    return total;
+}
+
+function orderSystem() {
+    let item = prompt("Enter item (burger/pizza/drink):").toLowerCase();
+    let quantity = parseInt(prompt("Enter quantity:"));
+
+    let bill = calculateOrder(item, quantity);
+
+    alert("Final Bill: " + bill);
+}
+
+orderSystem();
+function calculateSalary(hours) {
+    let rate = 500;
+    let salary;
+
+    if (hours > 40) {
+        let overtime = hours - 40;
+        salary = (40 * rate) + (overtime * rate * 1.5);
+    } else {
+        salary = hours * rate;
+    }
+
+    return salary;
+}
+
+function employeeSystem() {
+    for (let i = 1; i <= 3; i++) {
+        let name = prompt("Enter employee name:");
+        let hours = parseFloat(prompt("Enter hours worked:"));
+
+        let salary = calculateSalary(hours);
+
+        alert("Employee: " + name + "\nSalary: " + salary);
+    }
+}
+
+employeeSystem();
