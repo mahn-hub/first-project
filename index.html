@@ -1,247 +1,284 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>JavaScript Operators Tutorial</title>
 
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cognitive Architecture | Master Modern React</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed": "#000000",
+                        "surface": "#f5f7f9",
+                        "inverse-primary": "#8582ff",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#8885ff",
+                        "surface-container-highest": "#d9dde0",
+                        "error-container": "#f74b6d",
+                        "on-error-container": "#510017",
+                        "on-primary-container": "#14007e",
+                        "on-primary": "#f4f1ff",
+                        "outline-variant": "#abadaf",
+                        "error": "#b41340",
+                        "inverse-surface": "#0b0f10",
+                        "surface-variant": "#d9dde0",
+                        "outline": "#747779",
+                        "secondary-dim": "#6411d5",
+                        "surface-container": "#e5e9eb",
+                        "on-secondary-fixed-variant": "#6514d6",
+                        "surface-container-low": "#eef1f3",
+                        "surface-bright": "#f5f7f9",
+                        "primary": "#4a40e0",
+                        "tertiary-fixed-dim": "#25adf1",
+                        "secondary-fixed": "#dcc9ff",
+                        "on-surface": "#2c2f31",
+                        "primary-dim": "#3d30d4",
+                        "on-secondary-container": "#5b00c7",
+                        "surface-dim": "#d0d5d8",
+                        "error-dim": "#a70138",
+                        "secondary-container": "#dcc9ff",
+                        "inverse-on-surface": "#9a9d9f",
+                        "secondary": "#702ae1",
+                        "on-secondary": "#f8f0ff",
+                        "primary-container": "#9795ff",
+                        "surface-tint": "#4a40e0",
+                        "on-secondary-fixed": "#430097",
+                        "on-error": "#ffefef",
+                        "on-tertiary-fixed": "#001a29",
+                        "secondary-fixed-dim": "#d0b8ff",
+                        "surface-container-high": "#dfe3e6",
+                        "on-tertiary-container": "#00344d",
+                        "tertiary": "#00628c",
+                        "tertiary-fixed": "#40bbff",
+                        "tertiary-dim": "#00557b",
+                        "on-surface-variant": "#595c5e",
+                        "on-tertiary-fixed-variant": "#003d5a",
+                        "primary-fixed": "#9795ff",
+                        "tertiary-container": "#40bbff",
+                        "on-tertiary": "#e9f4ff",
+                        "background": "#f5f7f9",
+                        "on-background": "#2c2f31",
+                        "on-primary-fixed-variant": "#1a0099"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"],
+                        "mono": ["JetBrains Mono"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
 <style>
-body{
-font-family: Arial, sans-serif;
-background:#f4f6f8;
-margin:0;
-padding:20px;
-}
-
-.container{
-max-width:900px;
-margin:auto;
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
-
-h1{
-text-align:center;
-color:#333;
-}
-
-h2{
-color:#2c7be5;
-margin-top:25px;
-}
-
-.code{
-background:#272822;
-color:#f8f8f2;
-padding:10px;
-border-radius:6px;
-margin-top:8px;
-font-family:monospace;
-}
-
-.task{
-background:#eaf7ff;
-padding:10px;
-border-left:4px solid #2c7be5;
-margin-top:10px;
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-<h1>JavaScript Operators and Conditions</h1>
-<p>Simple explanation for beginners.</p>
-
-<h2>1. Arithmetic Operators</h2>
-<p>Used for math.</p>
-
-<p>Operators: +  -  *  /  %</p>
-
-<div class="code">
-let price = 100;
-let tax = 20;
-let total = price + tax;
-
-console.log(total);
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #4a40e0 0%, #702ae1 100%);
+        }
+        .code-glow {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(112, 42, 225, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f5f7f9]/70 dark:bg-[#0b0f10]/70 backdrop-blur-xl flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#6200EE] dark:text-[#702ae1]">terminal</span>
+<span class="text-xl font-bold tracking-tighter text-[#2c2f31] dark:text-white font-['Space_Grotesk']">Cognitive Architecture</span>
 </div>
-
-<p>Example: Shopping bill.</p>
-
-<div class="task">
-Task: Create two numbers and multiply them.
+<button class="p-2 hover:bg-[#dfe3e6] dark:hover:bg-[#dfe3e6]/20 transition-colors rounded-xl active:scale-95 duration-150">
+<span class="material-symbols-outlined text-[#abadaf]">menu</span>
+</button>
+</header>
+<main class="pt-20 pb-24">
+<!-- Hero Section -->
+<section class="px-6 py-12 md:py-24 overflow-hidden">
+<div class="max-w-screen-xl mx-auto">
+<div class="inline-block mb-4 px-3 py-1 bg-surface-container-high rounded-full">
+<span class="font-mono text-[10px] uppercase tracking-widest text-primary font-bold">Evolution v4.0</span>
 </div>
-
-
-<h2>2. Assignment Operators</h2>
-<p>Used to store values.</p>
-
-<p>=  +=  -=</p>
-
-<div class="code">
-let score = 10;
-
-score += 5;
-
-console.log(score);
+<h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-[0.95]">
+                    Architecting <br/><span class="text-transparent bg-clip-text primary-gradient">Intelligence.</span>
+</h1>
+<p class="text-on-surface-variant text-lg max-w-md mb-10 leading-relaxed">
+                    A high-performance laboratory for mastering React. Elevate your cognitive models of modern JavaScript state and logic.
+                </p>
+<div class="flex flex-col gap-4">
+<button class="primary-gradient text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg shadow-primary/20 active:scale-95 transition-transform text-center">
+                        Initialize Learning
+                    </button>
+<button class="bg-surface-container-highest text-on-surface px-8 py-4 rounded-full font-bold text-lg active:scale-95 transition-transform text-center">
+                        View Schema
+                    </button>
 </div>
-
-<p>Result becomes 15.</p>
-
-<div class="task">
-Task: Create a variable called money and add 50 to it.
 </div>
-
-
-<h2>3. Comparison Operators</h2>
-<p>Used to compare values.</p>
-
-<p>==  ===  !=  >  <  >=  <=</p>
-
-<h3>Difference between == and ===</h3>
-
-<p>== checks value only.</p>
-<p>=== checks value and type.</p>
-
-<div class="code">
-console.log(5 == "5"); 
-true
-
-console.log(5 === "5");
-false
+<!-- Decorative Visual -->
+<div class="mt-16 relative">
+<div class="aspect-video w-full rounded-xl overflow-hidden bg-inverse-surface shadow-2xl relative">
+<img class="w-full h-full object-cover opacity-60" data-alt="Abstract cybernetic representation of code flowing through a neural network with violet and blue neon light streaks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKbpip_vLUDmXZeORhnkIDiEMYB2TrctlBAt00QTSj9pcXU2-wFu0I7SGPQQqkRFZyfLxMLUTUCHhDqLl6tI3TXjpHX1SldtEdsgaerldso7pzSMRdXPeV0qjlqNh1DD-HkRwYvIcyMZoZ5KUcDh9sxRzHx9v7ntkZKQXdr7UdovBrcni1HB2ZFWj3HG-yehvQt5p6a7nO0psDd9CZuBldC4ExCcNkxL_8_gFw_YwaTrIa_3dLyI_A8o6ZkhkS3uaiT2OJd5Mfg2M"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface to-transparent"></div>
+<div class="absolute bottom-6 left-6 font-mono text-tertiary-fixed text-sm">
+                        $&gt; system.status: operational
+                    </div>
 </div>
-
-<div class="task">
-Task: Compare 10 and "10" using == and ===.
 </div>
-
-
-<h2>4. Logical Operators</h2>
-<p>Used for multiple conditions.</p>
-
-<p>&& AND</p>
-<p>|| OR</p>
-<p>! NOT</p>
-
-<div class="code">
-let age = 20;
-
-if(age > 18 && age < 30){
-console.log("Young adult");
-}
+</section>
+<!-- Function Declarations Section -->
+<section class="bg-surface-container-low px-6 py-20">
+<div class="flex items-center gap-3 mb-4">
+<span class="w-12 h-[1px] bg-primary"></span>
+<span class="font-mono text-xs text-primary uppercase tracking-tighter">Module 01</span>
 </div>
-
-<div class="task">
-Task: Check if number is greater than 10 AND less than 50.
+<h2 class="font-headline text-3xl font-bold mb-6">Function Declarations</h2>
+<p class="text-on-surface-variant mb-8 leading-relaxed">
+                The bedrock of JavaScript architecture. Declarations are hoisted, allowing for structural flexibility within your execution context.
+            </p>
+<div class="bg-inverse-surface p-6 rounded-xl relative overflow-hidden group">
+<div class="code-glow"></div>
+<pre class="font-mono text-sm text-secondary-fixed leading-relaxed"><code><span class="text-primary-container">function</span> <span class="text-tertiary-fixed">initProcess</span>(data) {
+  <span class="text-outline-variant">// Hoisted logic</span>
+  <span class="text-primary-container">return</span> data.map(node =&gt; ({
+    ...node,
+    active: <span class="text-error-container">true</span>
+  }));
+}</code></pre>
 </div>
-
-
-<h2>5. Unary Operators</h2>
-<p>Works with one value.</p>
-
-<p>++ increase</p>
-<p>-- decrease</p>
-
-<div class="code">
-let likes = 5;
-
-likes++;
-
-console.log(likes);
+</section>
+<!-- Arrow Functions Section -->
+<section class="bg-surface px-6 py-20">
+<div class="flex items-center gap-3 mb-4">
+<span class="w-12 h-[1px] bg-secondary"></span>
+<span class="font-mono text-xs text-secondary uppercase tracking-tighter">Module 02</span>
 </div>
-
-<div class="task">
-Task: Create a variable and increase it using ++.
+<h2 class="font-headline text-3xl font-bold mb-6">Arrow Functions</h2>
+<p class="text-on-surface-variant mb-8 leading-relaxed">
+                Syntactic elegance with lexical scoping. Perfect for anonymous operations and maintaining context in React component logic.
+            </p>
+<div class="grid grid-cols-1 gap-4">
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-outline-variant/10">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-10 h-10 rounded-full primary-gradient flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-sm">trending_flat</span>
 </div>
-
-
-<h2>6. Ternary Operator</h2>
-<p>Short version of if else.</p>
-
-<div class="code">
-let age = 17;
-
-let result = age >= 18 ? "Adult" : "Minor";
-
-console.log(result);
+<span class="font-bold">Lexical This</span>
 </div>
-
-<div class="task">
-Task: Check if marks are above 50 then pass otherwise fail.
+<p class="text-sm text-on-surface-variant">Arrows don't bind their own 'this', inheriting it from the parent scope.</p>
 </div>
-
-
-<h2>7. If Statement</h2>
-
-<div class="code">
-let age = 18;
-
-if(age >= 18){
-console.log("You can vote");
-}
+<div class="bg-inverse-surface p-6 rounded-xl relative overflow-hidden group">
+<pre class="font-mono text-sm text-secondary-fixed leading-relaxed"><code><span class="text-primary-container">const</span> <span class="text-tertiary-fixed">updateState</span> = (val) =&gt; 
+  val * <span class="text-error-container">2.5</span>;</code></pre>
 </div>
-
-
-<h2>8. If Else</h2>
-
-<div class="code">
-let password = "1234";
-
-if(password === "1234"){
-console.log("Login successful");
-}
-else{
-console.log("Wrong password");
-}
 </div>
-
-
-<h2>9. Else If</h2>
-
-<div class="code">
-let marks = 75;
-
-if(marks >= 80){
-console.log("A grade");
-}
-else if(marks >= 60){
-console.log("B grade");
-}
-else{
-console.log("C grade");
-}
+</section>
+<!-- Global State Section (Bento Inspired) -->
+<section class="bg-surface-container-low px-6 py-20">
+<h2 class="font-headline text-3xl font-bold mb-8 text-center">Global State</h2>
+<div class="grid grid-cols-2 gap-4">
+<div class="col-span-2 bg-surface-container-lowest p-8 rounded-xl relative overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover opacity-10" data-alt="Digital representation of a global data hub with glowing interconnecting nodes in deep space blues" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTZrxI_7H2AfwX2zAG9tsk8c0uXkhv3fL3x_W76lDU_PRN3Wtw5HiZoTmwHABLcVRvgho9KeqDSgHuvVqOMrf-qjQ1roPX9ROZw6sf4opv7rf82lKlAdoYrRWIdPR6y6_24pSrLWB05y2zYWKB3AAoi5SDXzomQu90DuhHXo4URLf2OAWp0GL2sZPR20OfnzU7_JA7iqsH-5NzsgnZJ6DkLkd-PyWryZ9JDjBj0Ii2Bn0mZi_sieRkLDXROP4i5184jLLgvvWXgns"/>
+<h3 class="font-headline text-xl font-bold mb-2">Context API</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Inject dependencies and data across your entire tree without prop-drilling.</p>
 </div>
-
-
-<h2>10. Switch Statement</h2>
-
-<div class="code">
-let day = 2;
-
-switch(day){
-
-case 1:
-console.log("Monday");
-break;
-
-case 2:
-console.log("Tuesday");
-break;
-
-default:
-console.log("Unknown day");
-
-}
+<div class="bg-primary text-white p-6 rounded-xl flex flex-col justify-between">
+<span class="material-symbols-outlined text-3xl">hub</span>
+<span class="font-mono text-[10px] uppercase font-bold mt-4">Sync Engine</span>
 </div>
-
-<div class="task">
-Task: Create switch for months.
+<div class="bg-secondary text-white p-6 rounded-xl flex flex-col justify-between">
+<span class="material-symbols-outlined text-3xl">database</span>
+<span class="font-mono text-[10px] uppercase font-bold mt-4">Redux Core</span>
 </div>
-
 </div>
-
-</body>
-</html>
+</section>
+<!-- Local State & Function State -->
+<section class="px-6 py-20 bg-surface">
+<div class="space-y-16">
+<!-- Local State -->
+<div class="relative">
+<div class="absolute -left-4 top-0 w-1 h-full bg-tertiary/20"></div>
+<h3 class="font-headline text-2xl font-bold mb-4">Local State</h3>
+<p class="text-on-surface-variant mb-6">Component-level persistence. Managing the immediate UI feedback loop with precision.</p>
+<div class="bg-surface-container-low p-6 rounded-xl border-b-2 border-primary">
+<div class="flex justify-between items-center mb-4">
+<span class="font-mono text-xs font-bold text-primary">Component.jsx</span>
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+</div>
+<pre class="font-mono text-xs text-on-surface overflow-x-auto"><code>[state, setState] = <span class="text-primary">useState</span>(null);</code></pre>
+</div>
+</div>
+<!-- Function State -->
+<div class="relative">
+<div class="absolute -left-4 top-0 w-1 h-full bg-secondary/20"></div>
+<h3 class="font-headline text-2xl font-bold mb-4">Function State</h3>
+<p class="text-on-surface-variant mb-6">Encapsulating logic within pure functions and custom hooks for maximum reusability.</p>
+<div class="bg-inverse-surface p-6 rounded-xl">
+<div class="flex gap-2 mb-4">
+<div class="w-2 h-2 rounded-full bg-error-dim"></div>
+<div class="w-2 h-2 rounded-full bg-tertiary"></div>
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+</div>
+<pre class="font-mono text-xs text-secondary-fixed leading-relaxed"><code><span class="text-primary-container">const</span> useCustomHook = () =&gt; {
+  <span class="text-outline-variant">// Shared Logic</span>
+};</code></pre>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#eef1f3] dark:bg-[#0b0f10] w-full py-12 px-6 border-t border-[#abadaf]/15 flex flex-col items-center space-y-6 w-full mb-20">
+<div class="font-['Space_Grotesk'] font-bold text-[#2c2f31] dark:text-white text-xl">Cognitive Architecture</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-['JetBrains_Mono'] text-xs text-[#abadaf] hover:text-primary transition-opacity" href="#">Documentation</a>
+<a class="font-['JetBrains_Mono'] text-xs text-[#abadaf] hover:text-primary transition-opacity" href="#">Privacy</a>
+<a class="font-['JetBrains_Mono'] text-xs text-[#abadaf] hover:text-primary transition-opacity" href="#">Terms</a>
+<a class="font-['JetBrains_Mono'] text-xs text-[#abadaf] hover:text-primary transition-opacity" href="#">Github</a>
+</div>
+<p class="font-['JetBrains_Mono'] text-[10px] text-[#abadaf] text-center">
+                © 2024 Cognitive Architecture. Engineered for precision.
+            </p>
+</footer>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl border-t border-[#abadaf]/15 bg-[#f5f7f9]/70 dark:bg-[#0b0f10]/70 backdrop-blur-xl shadow-[0_-4px_40px_rgba(44,47,49,0.05)] flex justify-around items-center px-4 py-3 pb-safe">
+<a class="flex flex-col items-center justify-center bg-[#6200EE]/10 dark:bg-[#702ae1]/20 text-[#6200EE] dark:text-[#702ae1] rounded-xl px-3 py-1 transition-all duration-200 translate-y-[-2px]" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-widest mt-1">Learn</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#abadaf] hover:text-[#6200EE] transition-all" href="#">
+<span class="material-symbols-outlined">code_blocks</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-widest mt-1">Concepts</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#abadaf] hover:text-[#6200EE] transition-all" href="#">
+<span class="material-symbols-outlined">account_tree</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-widest mt-1">State</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#abadaf] hover:text-[#6200EE] transition-all" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+</body></html>
