@@ -2,341 +2,140 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Registration Form</title>
-    
+    <title>GitHub Copilot Learning Assignment</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #11998E 0%, #38EF7D 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            position: relative;
-            overflow-x: hidden;
-        }
-
-        body::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.12) 1px, transparent 1px);
-            background-size: 24px 24px;
-            animation: float 25s linear infinite;
-            pointer-events: none;
-        }
-
-        @keyframes float {
-            0% { transform: translate(0, 0) rotate(0deg); }
-            100% { transform: translate(-60px, -60px) rotate(360deg); }
-        }
-
-        .container {
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            border-radius: 24px;
-            box-shadow: 0 24px 70px rgba(17, 153, 142, 0.35);
-            max-width: 500px;
-            width: 100%;
-            padding: 42px;
-            position: relative;
-            z-index: 1;
-            border: 1px solid rgba(255, 255, 255, 0.28);
-        }
-
-        h1 {
-            text-align: center;
-            color: #0F7A6E;
-            margin-bottom: 32px;
-            font-size: 25px;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            text-shadow: 0 2px 4px rgba(17, 153, 142, 0.1);
-        }
-
-        .form-group {
-            margin-bottom: 22px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: #2D3748;
-            font-size: 14px;
-            letter-spacing: 0.3px;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="password"],
-        input[type="tel"],
-        select,
-        textarea {
-            width: 100%;
-            padding: 14px 16px;
-            border: 2px solid #C6F6D5;
-            border-radius: 10px;
-            font-size: 15px;
-            transition: all 0.3s ease;
-            font-family: 'Poppins', sans-serif;
-            background: #F0FDF4;
-        }
-
-        input[type="text"]:focus,
-        input[type="email"]:focus,
-        input[type="password"]:focus,
-        input[type="tel"]:focus,
-        select:focus,
-        textarea:focus {
-            border-color: #38EF7D;
-            background: #fff;
-            box-shadow: 0 0 0 4px rgba(56, 239, 125, 0.15);
-            outline: none;
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-
-        .radio-group,
-        .checkbox-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 18px;
-            align-items: center;
-            padding-top: 5px;
-        }
-
-        .radio-group input,
-        .checkbox-group input {
-            width: 18px;
-            height: 18px;
-            margin: 0;
-            accent-color: #38EF7D;
-            cursor: pointer;
-        }
-
-        .radio-group label,
-        .checkbox-group label {
-            margin: 0;
-            font-weight: 400;
-            font-size: 14px;
-            color: #2D3748;
-            cursor: pointer;
-            user-select: none;
-        }
-
-        .error {
-            color: #E74C3C;
-            font-size: 12px;
-            margin-top: 6px;
-            display: block;
-            font-weight: 400;
-        }
-
-        button {
-            width: 100%;
-            padding: 16px;
-            background: linear-gradient(135deg, #11998E 0%, #38EF7D 100%);
-            color: #fff;
-            border: none;
-            border-radius: 10px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin-top: 10px;
-            box-shadow: 0 4px 20px rgba(56, 239, 125, 0.4);
-            letter-spacing: 0.5px;
-        }
-
-        button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(56, 239, 125, 0.5);
-            background: linear-gradient(135deg, #0F7A6E 0%, #2ED67A 100%);
-        }
-
-        button:active {
-            transform: translateY(0);
-        }
-
-        .display-section {
-            margin-top: 30px;
-            padding: 24px;
-            background: linear-gradient(135deg, #F0FFF4 0%, #C6F6D5 100%);
-            border-radius: 12px;
-            border: 2px solid #9AE6B4;
-        }
-
-        .display-section h2 {
-            color: #0F7A6E;
-            margin-bottom: 18px;
-            font-size: 20px;
-            font-weight: 600;
-        }
-
-        .display-section p {
-            margin: 10px 0;
-            color: #555;
-            font-size: 14px;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
         }
-
-        .display-section strong {
-            color: #444;
-            font-weight: 500;
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-
-        select {
-            cursor: pointer;
-            appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2311998E' d='M6 8.825L1.175 4 2.238 2.938 6 6.7 9.762 2.937 10.825 4z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 16px center;
-            padding-right: 40px;
+        h1, h2 {
+            color: #333;
         }
-
-        input::placeholder,
-        textarea::placeholder {
-            color: #AAA;
-            font-weight: 300;
+        .section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
         }
-
-        @media (max-width: 540px) {
-            .container {
-                padding: 25px;
-            }
-
-            h1 {
-                font-size: 22px;
-            }
-
-            button {
-                font-size: 15px;
-                padding: 14px;
-            }
-
-            .radio-group,
-            .checkbox-group {
-                gap: 12px;
-            }
+        .section:last-child {
+            border-bottom: none;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .highlight {
+            background-color: #e8f4f8;
+            padding: 10px;
+            border-left: 4px solid #007acc;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Student Registration Form</h1>
-        <form id="registrationForm">
-            <div class="form-group">
-                <label for="fullName">Full Name *</label>
-                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
-                <span class="error" id="fullNameError"></span>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email">
-                <span class="error" id="emailError"></span>
-            </div>
-
-            <div class="form-group">
-                <label for="password">Password *</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password">
-                <span class="error" id="passwordError"></span>
-            </div>
-
-            <div class="form-group">
-                <label for="confirmPassword">Confirm Password *</label>
-                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password">
-                <span class="error" id="confirmPasswordError"></span>
-            </div>
-
-            <div class="form-group">
-                <label for="phone">Phone Number *</label>
-                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
-                <span class="error" id="phoneError"></span>
-            </div>
-
-            <div class="form-group">
-                <label>Gender *</label>
-                <div class="radio-group">
-                    <input type="radio" id="male" name="gender" value="Male">
-                    <label for="male">Male</label>
-                    <input type="radio" id="female" name="gender" value="Female">
-                    <label for="female">Female</label>
-                    <input type="radio" id="other" name="gender" value="Other">
-                    <label for="other">Other</label>
-                </div>
-                <span class="error" id="genderError"></span>
-            </div>
-
-            <div class="form-group">
-                <label for="course">Course Selection *</label>
-                <select id="course" name="course">
-                    <option value="">Select a course</option>
-                    <option value="Computer Science">Computer Science</option>
-                    <option value="Business Administration">Business Administration</option>
-                    <option value="Engineering">Engineering</option>
-                    <option value="Mathematics">Mathematics</option>
-                    <option value="Physics">Physics</option>
-                </select>
-                <span class="error" id="courseError"></span>
-            </div>
-
-            <div class="form-group">
-                <label>Hobbies</label>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="reading" name="hobbies" value="Reading">
-                    <label for="reading">Reading</label>
-                    <input type="checkbox" id="sports" name="hobbies" value="Sports">
-                    <label for="sports">Sports</label>
-                    <input type="checkbox" id="music" name="hobbies" value="Music">
-                    <label for="music">Music</label>
-                    <input type="checkbox" id="travel" name="hobbies" value="Travel">
-                    <label for="travel">Travel</label>
-                </div>
-                <span class="error" id="hobbiesError"></span>
-            </div>
-
-            <div class="form-group">
-                <label for="message">Message/About Yourself *</label>
-                <textarea id="message" name="message" rows="4" placeholder="Tell us about yourself"></textarea>
-                <span class="error" id="messageError"></span>
-            </div>
-
-            <button type="submit">Register</button>
-        </form>
-
-        <div id="displayData" class="display-section"></div>
+        <h1>GitHub Copilot Learning Assignment</h1>
+        
+        <div class="section">
+            <h2>Tool Name</h2>
+            <p>GitHub Copilot</p>
+        </div>
+        
+        <div class="section">
+            <h2>Why You Chose It</h2>
+            <p>I chose GitHub Copilot because it represents the cutting edge of AI-assisted software development. As an aspiring developer, I believe mastering AI-powered coding tools will be crucial for future career growth. GitHub Copilot can significantly boost productivity, help learn new programming patterns, and reduce time spent on boilerplate code. It solves the problem of repetitive coding tasks and helps developers focus on more complex problem-solving aspects of software development.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Features & Research</h2>
+            <h3>Key Features:</h3>
+            <ul>
+                <li>AI-powered code completion suggestions</li>
+                <li>Supports multiple programming languages</li>
+                <li>Context-aware suggestions based on comments and existing code</li>
+                <li>Integration with popular IDEs (VS Code, JetBrains, Neovim)</li>
+                <li>Ability to generate entire functions or classes from natural language descriptions</li>
+                <li>Continuous learning from publicly available code</li>
+            </ul>
+            <h3>Industries Using It:</h3>
+            <ul>
+                <li>Software development companies</li>
+                <li>Tech startups</li>
+                <li>Freelance developers</li>
+                <li>Enterprise IT departments</li>
+                <li>Educational institutions</li>
+            </ul>
+            <h3>Future Demand and Opportunities:</h3>
+            <p>As AI-assisted development becomes more mainstream, proficiency with tools like GitHub Copilot will be increasingly valuable. Companies are adopting these tools to increase developer productivity, and job listings are starting to mention familiarity with AI coding assistants as a plus. The demand for developers who can effectively leverage AI tools is expected to grow significantly over the next few years.</p>
+            <h3>How Freelancers or Companies Use It:</h3>
+            <ul>
+                <li>Accelerating development cycles</li>
+                <li>Reducing time spent on boilerplate code</li>
+                <li>Learning new APIs and libraries quickly</li>
+                <li>Generating test cases and documentation</li>
+                <li>Assisting in code refactoring</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Learning Commitment</h2>
+            <p>Yes, I am ready to start learning GitHub Copilot seriously.</p>
+            <h3>Time to Learn Basics:</h3>
+            <p>Approximately 10-15 hours to become comfortable with basic features and integration.</p>
+            <h3>One-Month Learning Plan:</h3>
+            <ul>
+                <li><strong>Week 1:</strong> Install GitHub Copilot, complete official tutorials, experiment with basic code suggestions in Python and JavaScript.</li>
+                <li><strong>Week 2:</strong> Practice with different programming languages (Java, C++), learn to write effective prompts, explore Copilot Labs features.</li>
+                <li><strong>Week 3:</strong> Build a small project (e.g., personal website, API) heavily utilizing Copilot, evaluate suggestions critically.</li>
+                <li><strong>Week 4:</strong> Advanced features: refactoring assistance, test generation, customizing Copilot behavior, prepare portfolio pieces.</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Future Fiverr/Upwork Gig Idea</h2>
+            <p><strong>Service Title:</strong> AI-Assisted Development with GitHub Copilot</p>
+            <p><strong>Services Offered:</strong></p>
+            <ul>
+                <li>Rapid prototyping and MVP development</li>
+                <li>Code optimization and refactoring using AI assistance</li>
+                <li>Bug fixing and debugging support</li>
+                <li>Learning new technologies quickly with Copilot guidance</li>
+                <li>Custom script and automation development</li>
+            </ul>
+            <p><strong>Target Audience:</strong></p>
+            <ul>
+                <li>Startups needing fast development</li>
+                <li>Small businesses wanting custom software solutions</li>
+                <li>Individuals looking to automate personal tasks</li>
+                <li>Students needing help with programming assignments</li>
+                <li>Developers seeking to increase their productivity</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Expected Outcome After One Month</h2>
+            <p>After one month of dedicated learning and practice, I expect to:</p>
+            <ul>
+                <li>Be proficient in using GitHub Copilot across multiple IDEs and programming languages</li>
+                <li>Have built 2-3 portfolio projects demonstrating effective AI-assisted development</li>
+                <li>Be able to craft effective natural language prompts to get optimal code suggestions</li>
+                <li>Understand the limitations and best practices for responsible AI-assisted coding</li>
+                <li>Have a clear plan for offering GitHub Copilot-enhanced services on freelance platforms</li>
+                <li>Be prepared to showcase AI-assisted development skills to potential employers or clients</li>
+            </ul>
+        </div>
     </div>
-    <script src="Form.js"></script>
-</body>
-</html>
-
-
-
-    <script src="task.js"></script>
-    
 </body>
 </html>
