@@ -3,139 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Copilot Learning Assignment</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            color: #333;
-        }
-        .section {
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        .section:last-child {
-            border-bottom: none;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        .highlight {
-            background-color: #e8f4f8;
-            padding: 10px;
-            border-left: 4px solid #007acc;
-        }
-    </style>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#FFD6BA,#F7C8E0);
+}
+
+.container{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    width:350px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+h1{
+    margin-bottom:20px;
+    color:#1F1F1F;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border:2px solid #F7C8E0;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+button{
+    padding:12px 25px;
+    border:none;
+    background:#E8A0BF;
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+#weatherBox{
+    margin-top:20px;
+}
+
+#city{
+    color:#1F1F1F;
+}
+</style>
 <body>
+
     <div class="container">
-        <h1>GitHub Copilot Learning Assignment</h1>
-        
-        <div class="section">
-            <h2>Tool Name</h2>
-            <p>GitHub Copilot</p>
-        </div>
-        
-        <div class="section">
-            <h2>Why You Chose It</h2>
-            <p>I chose GitHub Copilot because it represents the cutting edge of AI-assisted software development. As an aspiring developer, I believe mastering AI-powered coding tools will be crucial for future career growth. GitHub Copilot can significantly boost productivity, help learn new programming patterns, and reduce time spent on boilerplate code. It solves the problem of repetitive coding tasks and helps developers focus on more complex problem-solving aspects of software development.</p>
-        </div>
-        
-        <div class="section">
-            <h2>Features & Research</h2>
-            <h3>Key Features:</h3>
-            <ul>
-                <li>AI-powered code completion suggestions</li>
-                <li>Supports multiple programming languages</li>
-                <li>Context-aware suggestions based on comments and existing code</li>
-                <li>Integration with popular IDEs (VS Code, JetBrains, Neovim)</li>
-                <li>Ability to generate entire functions or classes from natural language descriptions</li>
-                <li>Continuous learning from publicly available code</li>
-            </ul>
-            <h3>Industries Using It:</h3>
-            <ul>
-                <li>Software development companies</li>
-                <li>Tech startups</li>
-                <li>Freelance developers</li>
-                <li>Enterprise IT departments</li>
-                <li>Educational institutions</li>
-            </ul>
-            <h3>Future Demand and Opportunities:</h3>
-            <p>As AI-assisted development becomes more mainstream, proficiency with tools like GitHub Copilot will be increasingly valuable. Companies are adopting these tools to increase developer productivity, and job listings are starting to mention familiarity with AI coding assistants as a plus. The demand for developers who can effectively leverage AI tools is expected to grow significantly over the next few years.</p>
-            <h3>How Freelancers or Companies Use It:</h3>
-            <ul>
-                <li>Accelerating development cycles</li>
-                <li>Reducing time spent on boilerplate code</li>
-                <li>Learning new APIs and libraries quickly</li>
-                <li>Generating test cases and documentation</li>
-                <li>Assisting in code refactoring</li>
-            </ul>
-        </div>
-        
-        <div class="section">
-            <h2>Learning Commitment</h2>
-            <p>Yes, I am ready to start learning GitHub Copilot seriously.</p>
-            <h3>Time to Learn Basics:</h3>
-            <p>Approximately 10-15 hours to become comfortable with basic features and integration.</p>
-            <h3>One-Month Learning Plan:</h3>
-            <ul>
-                <li><strong>Week 1:</strong> Install GitHub Copilot, complete official tutorials, experiment with basic code suggestions in Python and JavaScript.</li>
-                <li><strong>Week 2:</strong> Practice with different programming languages (Java, C++), learn to write effective prompts, explore Copilot Labs features.</li>
-                <li><strong>Week 3:</strong> Build a small project (e.g., personal website, API) heavily utilizing Copilot, evaluate suggestions critically.</li>
-                <li><strong>Week 4:</strong> Advanced features: refactoring assistance, test generation, customizing Copilot behavior, prepare portfolio pieces.</li>
-            </ul>
-        </div>
-        
-        <div class="section">
-            <h2>Future Fiverr/Upwork Gig Idea</h2>
-            <p><strong>Service Title:</strong> AI-Assisted Development with GitHub Copilot</p>
-            <p><strong>Services Offered:</strong></p>
-            <ul>
-                <li>Rapid prototyping and MVP development</li>
-                <li>Code optimization and refactoring using AI assistance</li>
-                <li>Bug fixing and debugging support</li>
-                <li>Learning new technologies quickly with Copilot guidance</li>
-                <li>Custom script and automation development</li>
-            </ul>
-            <p><strong>Target Audience:</strong></p>
-            <ul>
-                <li>Startups needing fast development</li>
-                <li>Small businesses wanting custom software solutions</li>
-                <li>Individuals looking to automate personal tasks</li>
-                <li>Students needing help with programming assignments</li>
-                <li>Developers seeking to increase their productivity</li>
-            </ul>
-        </div>
-        
-        <div class="section">
-            <h2>Expected Outcome After One Month</h2>
-            <p>After one month of dedicated learning and practice, I expect to:</p>
-            <ul>
-                <li>Be proficient in using GitHub Copilot across multiple IDEs and programming languages</li>
-                <li>Have built 2-3 portfolio projects demonstrating effective AI-assisted development</li>
-                <li>Be able to craft effective natural language prompts to get optimal code suggestions</li>
-                <li>Understand the limitations and best practices for responsible AI-assisted coding</li>
-                <li>Have a clear plan for offering GitHub Copilot-enhanced services on freelance platforms</li>
-                <li>Be prepared to showcase AI-assisted development skills to potential employers or clients</li>
-            </ul>
+        <h1>Weather App</h1>
+
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button id="searchBtn">Search</button>
+
+        <div id="weatherBox">
+            <h2 id="city"></h2>
+            <p id="temp"></p>
+            <p id="desc"></p>
+            <p id="humidity"></p>
         </div>
     </div>
+
+    <script src="task,js"></script>
 </body>
 </html>
